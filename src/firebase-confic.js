@@ -1,18 +1,21 @@
 import { initializeApp } from "firebase/app";
 import {getFirestore} from '@firebase/firestore'
+import {getStorage} from 'firebase/storage'
+
+import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDuqkzvjR-WRqRjexadVePl5THVz2YZf60",
-    authDomain: "mobile-uni.firebaseapp.com",
-    projectId: "mobile-uni",
-    storageBucket: "mobile-uni.appspot.com",
-    messagingSenderId: "601334681686",
-    appId: "1:601334681686:web:d483002bb3dd4e25622bf7",
-    measurementId: "G-7KH6QYTYLF"
-  };
+  apiKey: "AIzaSyAVUUTJW7YqxXRpqBxotE9PS4EPgDrmchM",
+  authDomain: "pets-island.firebaseapp.com",
+  databaseURL: "https://pets-island-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "pets-island",
+  storageBucket: "pets-island.appspot.com",
+  messagingSenderId: "184876335281",
+  appId: "1:184876335281:web:5ae9423170ac2794e1e290"
+};
 
 
 
 const app = initializeApp(firebaseConfig);
-
-export const db = getFirestore(app);
+export const db = getDatabase(app);
+export const storage = getStorage(app);
