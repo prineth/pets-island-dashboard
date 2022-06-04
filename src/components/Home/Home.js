@@ -34,11 +34,17 @@ function Home() {
         const newFields={}
        if(upcategory){
            newFields.category = upcategory;
-       }else if(updiscription){
+       }
+       
+       if(updiscription){
            newFields.description = updiscription;
-       }else if(upitem_name){
+       }
+       
+       if(upitem_name){
            newFields.item_name = upitem_name;
-       }else if(upquantity){
+       }
+       
+       if(upquantity){
            newFields.qantity = upquantity;
        }
        
